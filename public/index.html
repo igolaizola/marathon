@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Plan de Entrenamiento Maratón</title>
+    <style>
+        :root {
+            --primary-color: #3498db;
+            --secondary-color: #2c3e50;
+            --background-color: #f0f4f8;
+            --card-background: #ffffff;
+            --card-background-alt: #e8eef3;
+            --text-color: #333333;
+            --accent-color: #e74c3c;
+        }
+
+        body {
+            font-family: 'Roboto', Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: var(--background-color);
+            color: var(--text-color);
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+        }
+
+        .container {
+            max-width: 600px;
+            margin: 0 auto;
+            padding: 20px;
+            flex-grow: 1;
+        }
+
+        h1 {
+            text-align: center;
+            color: var(--secondary-color);
+            font-size: 24px;
+            margin-bottom: 20px;
+        }
+
+        .week-nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 20px;
+            padding: 0 10px;
+        }
+
+        .week-nav button {
+            background-color: transparent;
+            color: var(--primary-color);
+            border: none;
+            cursor: pointer;
+            font-size: 16px;
+            padding: 5px 10px;
+            transition: background-color 0.3s ease;
+        }
+
+        .week-nav button:hover {
+            background-color: rgba(52, 152, 219, 0.1);
+        }
+
+        #currentWeek {
+            font-size: 16px;
+            font-weight: bold;
+        }
+
+        .week-info {
+            background-color: var(--card-background);
+            border-radius: 10px;
+            padding: 20px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            margin-bottom: 20px;
+        }
+
+        .week-info h2 {
+            margin-top: 0;
+            color: var(--secondary-color);
+            font-size: 20px;
+        }
+
+        .week-info p {
+            margin-bottom: 10px;
+            font-size: 14px;
+        }
+
+        .week-description {
+            display: none;
+            margin-top: 10px;
+            font-size: 14px;
+            line-height: 1.6;
+        }
+
+        .training-day {
+            background-color: var(--card-background);
+            border-radius: 5px;
+            padding: 15px;
+            margin-bottom: 10px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease;
+        }
+
+        .training-day:hover {
+            transform: translateY(-2px);
+        }
+
+        .training-day:nth-child(odd) {
+            background-color: var(--card-background-alt);
+        }
+
+        .training-day h3 {
+            margin-top: 0;
+            color: var(--secondary-color);
+            font-size: 16px;
+        }
+
+        .training-day p {
+            margin-bottom: 5px;
+            font-size: 14px;
+        }
+
+        .mesociclo {
+            font-weight: bold;
+            color: var(--accent-color);
+            font-size: 14px;
+        }
+
+        .toggle-description {
+            background: none;
+            border: none;
+            color: var(--primary-color);
+            cursor: pointer;
+            font-size: 14px;
+            padding: 5px 10px;
+            margin-top: 10px;
+            display: inline-flex;
+            align-items: center;
+            transition: background-color 0.3s ease;
+            border-radius: 15px;
+        }
+
+        .toggle-description:hover {
+            background-color: rgba(52, 152, 219, 0.1);
+        }
+
+        .toggle-description::before {
+            content: '▼';
+            display: inline-block;
+            margin-right: 5px;
+            transition: transform 0.3s ease;
+        }
+
+        .toggle-description.active::before {
+            transform: rotate(180deg);
+        }
+
+        footer {
+            background-color: var(--secondary-color);
+            color: white;
+            text-align: center;
+            padding: 10px;
+            font-size: 14px;
+            line-height: 1.5;
+        }
+
+        footer a {
+            color: var(--primary-color);
+            text-decoration: none;
+        }
+
+        footer a:hover {
+            text-decoration: underline;
+        }
+
+        .week-nav button.hidden {
+            visibility: hidden;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <h1>Plan de Entrenamiento Maratón</h1>
+        <div class="week-nav">
+            <button id="prevWeek">Anterior</button>
+            <span id="currentWeek"></span>
+            <button id="nextWeek">Siguiente</button>
+        </div>
+        <div id="weekInfo" class="week-info"></div>
+        <div id="trainingDays"></div>
+    </div>
+    <footer>
+        Web desarrollada por <a href="https://x.com/igolaizola" target="_blank">igolaizola</a><br>
+        Entrenamientos de <a href="https://x.com/josegaray71" target="_blank">Jose Garay</a>
+    </footer>
+
+    <script>
+        let currentWeekIndex = 0;
+        let entrenamientos = [];
+        let semanas = [];
+        let mesociclos = [];
+
+        async function fetchData() {
+            try {
+                const [entrenamientosResponse, semanasResponse, mesociclosResponse] = await Promise.all([
+                    fetch('entrenamientos.json'),
+                    fetch('semanas.json'),
+                    fetch('mesociclos.json')
+                ]);
+
+                entrenamientos = await entrenamientosResponse.json();
+                semanas = await semanasResponse.json();
+                mesociclos = await mesociclosResponse.json();
+
+                setCurrentWeek();
+                updateUI();
+            } catch (error) {
+                console.error('Error fetching data:', error);
+                document.getElementById('weekInfo').innerHTML = '<p>Error loading data. Please try again later.</p>';
+            }
+        }
+
+        function updateUI() {
+            if (semanas.length === 0 || currentWeekIndex < 0 || currentWeekIndex >= semanas.length) {
+                console.error('Invalid week index or no data');
+                return;
+            }
+
+            const weekInfo = semanas[currentWeekIndex];
+            const mesociclo = mesociclos.find(m => m.mesociclo === weekInfo.mesociclo);
+            const weekTrainings = entrenamientos.filter(e => e.mesociclo === weekInfo.mesociclo && e.semana === weekInfo.semana);
+
+            document.getElementById('currentWeek').textContent = `Semana ${weekInfo.semana}`;
+
+            // Update navigation buttons visibility
+            document.getElementById('prevWeek').classList.toggle('hidden', currentWeekIndex === 0);
+            document.getElementById('nextWeek').classList.toggle('hidden', currentWeekIndex === semanas.length - 1);
+
+            const weekInfoHtml = `
+                <h2>${weekInfo.nombre}</h2>
+                <p class="mesociclo">Mesociclo ${weekInfo.mesociclo}: ${mesociclo ? mesociclo.nombre : 'N/A'}</p>
+                <button class="toggle-description">Ver descripción</button>
+                <div class="week-description">
+                    <p>${weekInfo.descripcion}</p>
+                </div>
+            `;
+            document.getElementById('weekInfo').innerHTML = weekInfoHtml;
+
+            const trainingDaysHtml = weekTrainings.map(training => `
+                <div class="training-day">
+                    <h3>${new Date(training.fecha).toLocaleDateString('es-ES', { weekday: 'long', day: 'numeric', month: 'long' })}</h3>
+                    <p>${training.entrenamiento}</p>
+                </div>
+            `).join('');
+            document.getElementById('trainingDays').innerHTML = trainingDaysHtml;
+
+            document.querySelector('.toggle-description').addEventListener('click', toggleDescription);
+        }
+
+        function toggleDescription() {
+            const description = document.querySelector('.week-description');
+            const button = document.querySelector('.toggle-description');
+            button.classList.toggle('active');
+            if (description.style.display === 'none' || description.style.display === '') {
+                description.style.display = 'block';
+                button.textContent = 'Ocultar descripción';
+            } else {
+                description.style.display = 'none';
+                button.textContent = 'Ver descripción';
+            }
+        }
+
+        document.getElementById('prevWeek').addEventListener('click', () => {
+            if (currentWeekIndex > 0) {
+                currentWeekIndex--;
+                updateUI();
+            }
+        });
+
+        document.getElementById('nextWeek').addEventListener('click', () => {
+            if (currentWeekIndex < semanas.length - 1) {
+                currentWeekIndex++;
+                updateUI();
+            }
+        });
+
+        function setCurrentWeek() {
+            const today = new Date();
+            const startDate = new Date('2024-08-05');
+            const endDate = new Date('2024-11-24');
+
+            if (today < startDate || today > endDate) {
+                currentWeekIndex = 0;  // Show the first week
+            } else {
+                const weekDiff = Math.floor((today - startDate) / (7 * 24 * 60 * 60 * 1000));
+                currentWeekIndex = Math.min(Math.max(weekDiff, 0), semanas.length - 1);
+            }
+        }
+
+        fetchData();
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,786 @@
+[
+    {
+        "mesociclo": 1,
+        "semana": 1,
+        "fecha": "2024-08-05",
+        "dia": "LU",
+        "entrenamiento": "Descanso"
+    },
+    {
+        "mesociclo": 1,
+        "semana": 1,
+        "fecha": "2024-08-06",
+        "dia": "MA",
+        "entrenamiento": "Fuerza: Circuito de fortalecimiento\n20' c.c Suaves (4:45 - 4:40 x km) + circuito de fortalecimiento + 6 x 80m progresivos para soltar piernas + flexibilidad"
+    },
+    {
+        "mesociclo": 1,
+        "semana": 1,
+        "fecha": "2024-08-07",
+        "dia": "MI",
+        "entrenamiento": "Cambios de ritmo\n20' c.c Suaves + cambios cortos 10 x (45\" vivos + 45\" suaves) + 10' Suaves + flexibilidad"
+    },
+    {
+        "mesociclo": 1,
+        "semana": 1,
+        "fecha": "2024-08-08",
+        "dia": "JU",
+        "entrenamiento": "Rodaje aeróbico extensivo\n50' c.c ritmo extensivo constante (4:45 - 4:40 x km) + core + flexibilidad"
+    },
+    {
+        "mesociclo": 1,
+        "semana": 1,
+        "fecha": "2024-08-09",
+        "dia": "VI",
+        "entrenamiento": "Descanso"
+    },
+    {
+        "mesociclo": 1,
+        "semana": 1,
+        "fecha": "2024-08-10",
+        "dia": "SA",
+        "entrenamiento": "Entrenamieno de fartlek\n15' c.c Suaves + fartlek 6 x (3:00 ritmo (4:25 - 4:20 x km) + 1:30 suave ritmo (4:45 x km)) + 10' Suaves + flexibilidad"
+    },
+    {
+        "mesociclo": 1,
+        "semana": 1,
+        "fecha": "2024-08-11",
+        "dia": "DO",
+        "entrenamiento": "Rodaje aeróbico extensivo\n60' c.c ritmo extensivo constante (4:45 - 4:40 x km) + core + flexibilidad"
+    },
+    {
+        "mesociclo": 1,
+        "semana": 2,
+        "fecha": "2024-08-12",
+        "dia": "LU",
+        "entrenamiento": "Descanso"
+    },
+    {
+        "mesociclo": 1,
+        "semana": 2,
+        "fecha": "2024-08-13",
+        "dia": "MA",
+        "entrenamiento": "Fuerza: Circuito de fortalecimiento\n20' c.c Suaves (4:45 - 4:40 x km) + circuito de fortalecimiento + 6 x 80m progresivos para soltar piernas + flexibilidad"
+    },
+    {
+        "mesociclo": 1,
+        "semana": 2,
+        "fecha": "2024-08-14",
+        "dia": "MI",
+        "entrenamiento": "Cambios de ritmo\n15' c.c Suaves + cambios cortos 10 x (1:00 vivos + 1:00 suaves) + 10' Suaves + flexibilidad"
+    },
+    {
+        "mesociclo": 1,
+        "semana": 2,
+        "fecha": "2024-08-15",
+        "dia": "JU",
+        "entrenamiento": "Rodaje aeróbico extensivo\n60' c.c ritmo extensivo constante (4:45 - 4:40 x km) + core + flexibilidad"
+    },
+    {
+        "mesociclo": 1,
+        "semana": 2,
+        "fecha": "2024-08-16",
+        "dia": "VI",
+        "entrenamiento": "Descanso"
+    },
+    {
+        "mesociclo": 1,
+        "semana": 2,
+        "fecha": "2024-08-17",
+        "dia": "SA",
+        "entrenamiento": "Entrenamieno de fartlek\n15' c.c Suaves + fartlek 4 x (5:00 ritmo (4:25 - 4:20 x km) + 2:00 suave ritmo (4:45 x km)) + 10' Suaves + flexibilidad"
+    },
+    {
+        "mesociclo": 1,
+        "semana": 2,
+        "fecha": "2024-08-18",
+        "dia": "DO",
+        "entrenamiento": "Rodaje aeróbico extensivo\n60' c.c ritmo extensivo constante (4:45 - 4:40 x km) + core + flexibilidad"
+    },
+    {
+        "mesociclo": 2,
+        "semana": 3,
+        "fecha": "2024-08-19",
+        "dia": "LU",
+        "entrenamiento": "Descanso"
+    },
+    {
+        "mesociclo": 2,
+        "semana": 3,
+        "fecha": "2024-08-20",
+        "dia": "MA",
+        "entrenamiento": "Test aeróbico\nTest aeróbico (ajuste de intensidades) 1h 10' c.c 4:45 - 4:40 x km (ritmo constante y valorar la estabilidad cardíaca)"
+    },
+    {
+        "mesociclo": 2,
+        "semana": 3,
+        "fecha": "2024-08-21",
+        "dia": "MI",
+        "entrenamiento": "Entrenamiento interválico\n20' suaves + Interval 2 x 7 x (400 x 1:32 - 1:30 (ritmo 3:45 x km) rec. 1:00) rec. entre los dos bloques 2:00 + 10' suaves + flexibilidad"
+    },
+    {
+        "mesociclo": 2,
+        "semana": 3,
+        "fecha": "2024-08-22",
+        "dia": "JU",
+        "entrenamiento": "Rodaje aeróbico extensivo\n1h 10' ritmo extensivo constante 4:45 - 4:40 x km + core + flexibilidad"
+    },
+    {
+        "mesociclo": 2,
+        "semana": 3,
+        "fecha": "2024-08-23",
+        "dia": "VI",
+        "entrenamiento": "Descanso"
+    },
+    {
+        "mesociclo": 2,
+        "semana": 3,
+        "fecha": "2024-08-24",
+        "dia": "SA",
+        "entrenamiento": "Entrenamiento ritmo controlado: mejora potencia aeróbica\n15' suaves + ritmo controlado 3 x (3km ritmo (4:25 - 4:20 x km) + 1km ritmo (4:45)) + 5' suaves + flexibilidad"
+    },
+    {
+        "mesociclo": 2,
+        "semana": 3,
+        "fecha": "2024-08-25",
+        "dia": "DO",
+        "entrenamiento": "Rodaje semilargo aeróbico extensivo\n1h 15' ritmos extensivo constante 4:45 - 4:40 x 1000 + flexibilidad"
+    },
+    {
+        "mesociclo": 2,
+        "semana": 4,
+        "fecha": "2024-08-26",
+        "dia": "LU",
+        "entrenamiento": "Descanso"
+    },
+    {
+        "mesociclo": 2,
+        "semana": 4,
+        "fecha": "2024-08-27",
+        "dia": "MA",
+        "entrenamiento": "Fuerza: Circuito de fortalecimiento\n20' c.c Suaves (4:45 x km) + circuito de fortalecimiento + 8 x 80m progresivos para soltar piernas + flexibilidad"
+    },
+    {
+        "mesociclo": 2,
+        "semana": 4,
+        "fecha": "2024-08-28",
+        "dia": "MI",
+        "entrenamiento": "Entrenamiento interválico\n20' suaves + Interval 2 x 7 x (500 x 1:55 (ritmo 3:50 x km) rec. 1:00) rec. entre los dos bloques 2:00 + 10' suaves + flexibilidad"
+    },
+    {
+        "mesociclo": 2,
+        "semana": 4,
+        "fecha": "2024-08-29",
+        "dia": "JU",
+        "entrenamiento": "Rodaje semilargo aeróbico extensivo\n1h 15' ritmo extensivo constante 4:45 - 4:40 x 1000 + core + flexibilidad"
+    },
+    {
+        "mesociclo": 2,
+        "semana": 4,
+        "fecha": "2024-08-30",
+        "dia": "VI",
+        "entrenamiento": "Descanso"
+    },
+    {
+        "mesociclo": 2,
+        "semana": 4,
+        "fecha": "2024-08-31",
+        "dia": "SA",
+        "entrenamiento": "Entrenamiento ritmo controlado: mejora potencia aeróbica\n15' suaves+ ritmo controlado 2 x (4km ritmo (4:25 - 4:20 x km) + 1km ritmo (4:45)) + 5' suaves + flexibilidad"
+    },
+    {
+        "mesociclo": 2,
+        "semana": 4,
+        "fecha": "2024-09-01",
+        "dia": "DO",
+        "entrenamiento": "Rodaje largo aeróbico extensivo\n1h 20' ritmos extensivo constante 4:45 - 4:40 x km + flexibilidad"
+    },
+    {
+        "mesociclo": 2,
+        "semana": 5,
+        "fecha": "2024-09-02",
+        "dia": "LU",
+        "entrenamiento": "Descanso"
+    },
+    {
+        "mesociclo": 2,
+        "semana": 5,
+        "fecha": "2024-09-03",
+        "dia": "MA",
+        "entrenamiento": "Fuerza: Circuito de fortalecimiento\n20' c.c Suaves (4:45 x km) + circuito de fortalecimiento + 8 x 80m progresivos para soltar piernas + flexibilidad"
+    },
+    {
+        "mesociclo": 2,
+        "semana": 5,
+        "fecha": "2024-09-04",
+        "dia": "MI",
+        "entrenamiento": "Entrenamiento de series\n20' suaves + Series 6 x 1000 x 3:55 - 4:00 rec. 1:30 (parado) + 10' suaves + flexibilidad"
+    },
+    {
+        "mesociclo": 2,
+        "semana": 5,
+        "fecha": "2024-09-05",
+        "dia": "JU",
+        "entrenamiento": "Rodaje semilargo aeróbico extensivo\n1h 15' ritmo extensivo constante 4:45 - 4:40 x km + core + flexibilidad"
+    },
+    {
+        "mesociclo": 2,
+        "semana": 5,
+        "fecha": "2024-09-06",
+        "dia": "VI",
+        "entrenamiento": "Descanso"
+    },
+    {
+        "mesociclo": 2,
+        "semana": 5,
+        "fecha": "2024-09-07",
+        "dia": "SA",
+        "entrenamiento": "Entrenamiento ritmo controlado: mejora potencia aeróbica\n15' suaves + ritmo controlado 4 x (2km ritmo (4:25 - 4:20 x km) + 1km ritmo (4:45)) + 5' suaves + flexibilidad"
+    },
+    {
+        "mesociclo": 2,
+        "semana": 5,
+        "fecha": "2024-09-08",
+        "dia": "DO",
+        "entrenamiento": "Rodaje largo aeróbico extensivo\n1h 30' ritmos extensivo constante 4:45 - 4:40 x km + flexibilidad"
+    },
+    {
+        "mesociclo": 2,
+        "semana": 6,
+        "fecha": "2024-09-09",
+        "dia": "LU",
+        "entrenamiento": "Descanso"
+    },
+    {
+        "mesociclo": 2,
+        "semana": 6,
+        "fecha": "2024-09-10",
+        "dia": "MA",
+        "entrenamiento": "Fuerza: Circuito de fortalecimiento\n20' c.c Suaves (4:45 x km) + circuito de fortalecimiento + 8 x 80m progresivos para soltar piernas + flexibilidad"
+    },
+    {
+        "mesociclo": 2,
+        "semana": 6,
+        "fecha": "2024-09-11",
+        "dia": "MI",
+        "entrenamiento": "Entrenamiento de series\n20' suaves + Series 3 x 1000 x 4:00 rec. 1:30 (parado) + 4 x 500 x 1:55 rec 1:30 (parado) + 10' suaves + flexibilidad"
+    },
+    {
+        "mesociclo": 2,
+        "semana": 6,
+        "fecha": "2024-09-12",
+        "dia": "JU",
+        "entrenamiento": "Rodaje aeróbico extensivo\n60' ritmo extensivo constante 4:45 - 4:40 x km + core + flexibilidad"
+    },
+    {
+        "mesociclo": 2,
+        "semana": 6,
+        "fecha": "2024-09-13",
+        "dia": "VI",
+        "entrenamiento": "Descanso"
+    },
+    {
+        "mesociclo": 2,
+        "semana": 6,
+        "fecha": "2024-09-14",
+        "dia": "SA",
+        "entrenamiento": "Entrenamiento precompetitivo\nSesión precompetitiva 20' suaves + 5-6 progresivos de 60m soltando piernas + flexibilidad"
+    },
+    {
+        "mesociclo": 2,
+        "semana": 6,
+        "fecha": "2024-09-15",
+        "dia": "DO",
+        "entrenamiento": "ELEGIR UNA COMPETICIÓN DE 10K / 15K (TEST RITMO MARATÓN)"
+    },
+    {
+        "mesociclo": 3,
+        "semana": 7,
+        "fecha": "2024-09-16",
+        "dia": "LU",
+        "entrenamiento": "Descanso"
+    },
+    {
+        "mesociclo": 3,
+        "semana": 7,
+        "fecha": "2024-09-17",
+        "dia": "MA",
+        "entrenamiento": "Test aeróbico\nTest aeróbico (ajuste de intensidades) 1h 15' c.c 4:40 - 4:35 x km (ritmo constante y valorar la estabilidad cardíaca)"
+    },
+    {
+        "mesociclo": 3,
+        "semana": 7,
+        "fecha": "2024-09-18",
+        "dia": "MI",
+        "entrenamiento": "Entrenamiento de series\n20' suaves + Series 8 x 1000 x 4:00 - 3:55 rec. 1:30 (parado) + 10' suaves + flexibilidad"
+    },
+    {
+        "mesociclo": 3,
+        "semana": 7,
+        "fecha": "2024-09-19",
+        "dia": "JU",
+        "entrenamiento": "Rodaje semilargo aeróbico extensivo\n1h 15' ritmo extensivo constante 4:40 - 4:35 x km + core + flexibilidad"
+    },
+    {
+        "mesociclo": 3,
+        "semana": 7,
+        "fecha": "2024-09-20",
+        "dia": "VI",
+        "entrenamiento": "Descanso"
+    },
+    {
+        "mesociclo": 3,
+        "semana": 7,
+        "fecha": "2024-09-21",
+        "dia": "SA",
+        "entrenamiento": "Entrenamieno ritmo maratón\n15' suaves + ritmo maratón 3 x (3km (ritmo 4:15 - 4:10 x km) + 1km 4:40) +flexibilidad"
+    },
+    {
+        "mesociclo": 3,
+        "semana": 7,
+        "fecha": "2024-09-22",
+        "dia": "DO",
+        "entrenamiento": "Rodaje largo aeróbico extensivo\n1h 45' ritmo extensivo constante 4:40 - 4:35 x km + flexibilidad"
+    },
+    {
+        "mesociclo": 3,
+        "semana": 8,
+        "fecha": "2024-09-23",
+        "dia": "LU",
+        "entrenamiento": "Descanso"
+    },
+    {
+        "mesociclo": 3,
+        "semana": 8,
+        "fecha": "2024-09-24",
+        "dia": "MA",
+        "entrenamiento": "Fuerza: Circuito de fortalecimiento\n20' c.c Suaves (4:45 x km) + circuito de fortalecimiento + flexibilidad"
+    },
+    {
+        "mesociclo": 3,
+        "semana": 8,
+        "fecha": "2024-09-25",
+        "dia": "MI",
+        "entrenamiento": "Entrenamiento kms alternos: mejora potencia aeróbica\n20' c.c Suaves + kms alternos 6 x (1km (ritmo 4:25 - 4:20) + 1km (ritmo 4:40)) + 5' suaves soltando piernas + flexibilidad"
+    },
+    {
+        "mesociclo": 3,
+        "semana": 8,
+        "fecha": "2024-09-26",
+        "dia": "JU",
+        "entrenamiento": "Rodaje semilargo aeróbico extensivo\n1h 20' ritmo extensivo constante 4:40 - 4:35 x km + core + flexibilidad"
+    },
+    {
+        "mesociclo": 3,
+        "semana": 8,
+        "fecha": "2024-09-27",
+        "dia": "VI",
+        "entrenamiento": "Descanso"
+    },
+    {
+        "mesociclo": 3,
+        "semana": 8,
+        "fecha": "2024-09-28",
+        "dia": "SA",
+        "entrenamiento": "Entrenamieno ritmo maratón\n15' suaves + ritmo maratón 4 x (2km (ritmo 4:15 - 4:10 x km) + 1km 4:40) +flexibilidad"
+    },
+    {
+        "mesociclo": 3,
+        "semana": 8,
+        "fecha": "2024-09-29",
+        "dia": "DO",
+        "entrenamiento": "Rodaje largo aeróbico extensivo\n1h 50' ritmo extensivo constante 4:40 - 4:35 x km + flexibilidad"
+    },
+    {
+        "mesociclo": 3,
+        "semana": 9,
+        "fecha": "2024-09-30",
+        "dia": "LU",
+        "entrenamiento": "Descanso"
+    },
+    {
+        "mesociclo": 3,
+        "semana": 9,
+        "fecha": "2024-10-01",
+        "dia": "MA",
+        "entrenamiento": "Fuerza: Circuito de fortalecimiento\n20' c.c Suaves (4:45 x km) + circuito de fortalecimiento + flexibilidad"
+    },
+    {
+        "mesociclo": 3,
+        "semana": 9,
+        "fecha": "2024-10-02",
+        "dia": "MI",
+        "entrenamiento": "Entrenamiento de series\n20' suaves + Series 4 x 2000 x 8:00 (ritmo 4:00 x km) rec. 2:00 (parado) + 10' suaves + flexibilidad"
+    },
+    {
+        "mesociclo": 3,
+        "semana": 9,
+        "fecha": "2024-10-03",
+        "dia": "JU",
+        "entrenamiento": "Rodaje semilargo aeróbico extensivo\n1h 20' ritmo extensivo constante 4:40 - 4:35 x km + core + flexibilidad"
+    },
+    {
+        "mesociclo": 3,
+        "semana": 9,
+        "fecha": "2024-10-04",
+        "dia": "VI",
+        "entrenamiento": "Descanso"
+    },
+    {
+        "mesociclo": 3,
+        "semana": 9,
+        "fecha": "2024-10-05",
+        "dia": "SA",
+        "entrenamiento": "Entrenamieno ritmo maratón\n20' suaves + ritmo maratón 4km (ritmo 4:15 x km) rec. 3:00 (trote) + 2000 (ritmo 4:10 x km) rec. 3:00 (trote) + 4km (ritmo 4:15 x km) +flexibilidad"
+    },
+    {
+        "mesociclo": 3,
+        "semana": 9,
+        "fecha": "2024-10-06",
+        "dia": "DO",
+        "entrenamiento": "Rodaje largo aeróbico extensivo\n1h 40' ritmo extensivo constante 4:40 - 4:35 x km + flexibilidad"
+    },
+    {
+        "mesociclo": 3,
+        "semana": 10,
+        "fecha": "2024-10-07",
+        "dia": "LU",
+        "entrenamiento": "Descanso"
+    },
+    {
+        "mesociclo": 3,
+        "semana": 10,
+        "fecha": "2024-10-08",
+        "dia": "MA",
+        "entrenamiento": "Fuerza: Circuito de fortalecimiento\n20' c.c Suaves (4:45 x km) + circuito de fortalecimiento + flexibilidad"
+    },
+    {
+        "mesociclo": 3,
+        "semana": 10,
+        "fecha": "2024-10-09",
+        "dia": "MI",
+        "entrenamiento": "Entrenamiento de series\n20' suaves + Series 5 x 1000 x 4:00 rec. 1:30 (parado) + 10' suaves + flexibilidad"
+    },
+    {
+        "mesociclo": 3,
+        "semana": 10,
+        "fecha": "2024-10-10",
+        "dia": "JU",
+        "entrenamiento": "Rodaje aeróbico extensivo\n45' ritmo extensivo constante 4:40 - 4:35 x km + core + flexibilidad"
+    },
+    {
+        "mesociclo": 3,
+        "semana": 10,
+        "fecha": "2024-10-11",
+        "dia": "VI",
+        "entrenamiento": "Descanso"
+    },
+    {
+        "mesociclo": 3,
+        "semana": 10,
+        "fecha": "2024-10-12",
+        "dia": "SA",
+        "entrenamiento": "Entrenamiento precompetitivo\nSesión precompetitiva 20' suaves + 5-6 progresivos de 60m soltando piernas + flexibilidad"
+    },
+    {
+        "mesociclo": 3,
+        "semana": 10,
+        "fecha": "2024-10-13",
+        "dia": "DO",
+        "entrenamiento": "MEDIO MARATÓN VALENCIA"
+    },
+    {
+        "mesociclo": 3,
+        "semana": 11,
+        "fecha": "2024-10-14",
+        "dia": "LU",
+        "entrenamiento": "Descanso"
+    },
+    {
+        "mesociclo": 3,
+        "semana": 11,
+        "fecha": "2024-10-15",
+        "dia": "MA",
+        "entrenamiento": "Entrenamiento regeneración\nDÍA DE RECUPERACIÓN POST-MEDIO 30' Suaves a ritmo lento 4:45 x km + flexibilidad"
+    },
+    {
+        "mesociclo": 3,
+        "semana": 11,
+        "fecha": "2024-10-16",
+        "dia": "MI",
+        "entrenamiento": "Entrenamiento regeneración\nDÍA DE RECUPERACIÓN POST-MEDIO 45' Suaves a ritmo lento 4:45 x km + flexibilidad"
+    },
+    {
+        "mesociclo": 3,
+        "semana": 11,
+        "fecha": "2024-10-17",
+        "dia": "JU",
+        "entrenamiento": "Rodaje aeróbico extensivo\n1h 10' ritmo extensivo constante 4:40 - 4:35 x km + core + flexibilidad"
+    },
+    {
+        "mesociclo": 3,
+        "semana": 11,
+        "fecha": "2024-10-18",
+        "dia": "VI",
+        "entrenamiento": "Descanso"
+    },
+    {
+        "mesociclo": 3,
+        "semana": 11,
+        "fecha": "2024-10-19",
+        "dia": "SA",
+        "entrenamiento": "Entrenamieno ritmo maratón\n20' suaves + ritmo maratón 2 x (4km (4:15 - 4:10 x km) + 1km (4:45)) +flexibilidad"
+    },
+    {
+        "mesociclo": 3,
+        "semana": 11,
+        "fecha": "2024-10-20",
+        "dia": "DO",
+        "entrenamiento": "Rodaje largo aeróbico extensivo\n2h ritmo extensivo constante 4:40 - 4:35 x km + flexibilidad"
+    },
+    {
+        "mesociclo": 4,
+        "semana": 12,
+        "fecha": "2024-10-21",
+        "dia": "LU",
+        "entrenamiento": "Descanso"
+    },
+    {
+        "mesociclo": 4,
+        "semana": 12,
+        "fecha": "2024-10-22",
+        "dia": "MA",
+        "entrenamiento": "Fuerza: Circuito de fortalecimiento\n20' c.c Suaves (4:45 x km) + circuito de fortalecimiento + flexibilidad"
+    },
+    {
+        "mesociclo": 4,
+        "semana": 12,
+        "fecha": "2024-10-23",
+        "dia": "MI",
+        "entrenamiento": "Entrenamiento de series\n20' suaves + Series 8 x 1000 x 4:00 - 3:55 rec. 1:30 (parado) + 10' suaves + flexibilidad"
+    },
+    {
+        "mesociclo": 4,
+        "semana": 12,
+        "fecha": "2024-10-24",
+        "dia": "JU",
+        "entrenamiento": "Rodaje semilargo aeróbico extensivo\n1h 20' ritmo extensivo constante 4:40 - 4:35 x km + core + flexibilidad"
+    },
+    {
+        "mesociclo": 4,
+        "semana": 12,
+        "fecha": "2024-10-25",
+        "dia": "VI",
+        "entrenamiento": "Descanso"
+    },
+    {
+        "mesociclo": 4,
+        "semana": 12,
+        "fecha": "2024-10-26",
+        "dia": "SA",
+        "entrenamiento": "Entrenamieno ritmo maratón\n15' suaves + ritmo maratón 2 x 6 km (4:15 - 4:10 x km) rec. 3:00 (trote) +flexibilidad"
+    },
+    {
+        "mesociclo": 4,
+        "semana": 12,
+        "fecha": "2024-10-27",
+        "dia": "DO",
+        "entrenamiento": "Rodaje largo aeróbico extensivo\n2h 15' ritmo extensivo constante 4:40 - 4:35 x km + flexibilidad"
+    },
+    {
+        "mesociclo": 4,
+        "semana": 13,
+        "fecha": "2024-10-28",
+        "dia": "LU",
+        "entrenamiento": "Descanso"
+    },
+    {
+        "mesociclo": 4,
+        "semana": 13,
+        "fecha": "2024-10-29",
+        "dia": "MA",
+        "entrenamiento": "Fuerza: Circuito de fortalecimiento\n20' c.c Suaves (4:45 x km) + circuito de fortalecimiento + flexibilidad"
+    },
+    {
+        "mesociclo": 4,
+        "semana": 13,
+        "fecha": "2024-10-30",
+        "dia": "MI",
+        "entrenamiento": "Entrenamiento de series\n20' suaves + 3 x (2000 (ritmo 4:00 x km) rec. 2:30 (parado) + 1000 (ritmo 3:55 x km) rec. 1:30 (parado))+ 5' suaves + flexibilidad"
+    },
+    {
+        "mesociclo": 4,
+        "semana": 13,
+        "fecha": "2024-10-31",
+        "dia": "JU",
+        "entrenamiento": "Rodaje semilargo aeróbico extensivo\n1h 20' ritmo extensivo constante 4:40 - 4:35 x km + core + flexibilidad"
+    },
+    {
+        "mesociclo": 4,
+        "semana": 13,
+        "fecha": "2024-11-01",
+        "dia": "VI",
+        "entrenamiento": "Descanso"
+    },
+    {
+        "mesociclo": 4,
+        "semana": 13,
+        "fecha": "2024-11-02",
+        "dia": "SA",
+        "entrenamiento": "Entrenamieno ritmo maratón\n15' suaves + ritmo maratón 3 x 5 km (4:15 - 4:10 x km) rec. 2:30 (trote) +flexibilidad"
+    },
+    {
+        "mesociclo": 4,
+        "semana": 13,
+        "fecha": "2024-11-03",
+        "dia": "DO",
+        "entrenamiento": "Rodaje largo aeróbico extensivo\n2h 25' ritmo extensivo constante 4:40 - 4:35 x km + flexibilidad"
+    },
+    {
+        "mesociclo": 4,
+        "semana": 14,
+        "fecha": "2024-11-04",
+        "dia": "LU",
+        "entrenamiento": "Descanso"
+    },
+    {
+        "mesociclo": 4,
+        "semana": 14,
+        "fecha": "2024-11-05",
+        "dia": "MA",
+        "entrenamiento": "Fuerza: Circuito de fortalecimiento\n20' c.c Suaves (4:45 x km) + circuito de fortalecimiento + flexibilidad"
+    },
+    {
+        "mesociclo": 4,
+        "semana": 14,
+        "fecha": "2024-11-06",
+        "dia": "MI",
+        "entrenamiento": "Entrenamiento de series\n20' suaves + Series 10 x 1000 x 4:00 - 3:55 rec. 1:30 (parado) + 10' suaves + flexibilidad"
+    },
+    {
+        "mesociclo": 4,
+        "semana": 14,
+        "fecha": "2024-11-07",
+        "dia": "JU",
+        "entrenamiento": "Rodaje semilargo aeróbico extensivo\n1h 20' ritmo extensivo constante 4:40 - 4:35 x km + core + flexibilidad"
+    },
+    {
+        "mesociclo": 4,
+        "semana": 14,
+        "fecha": "2024-11-08",
+        "dia": "VI",
+        "entrenamiento": "Descanso"
+    },
+    {
+        "mesociclo": 4,
+        "semana": 14,
+        "fecha": "2024-11-09",
+        "dia": "SA",
+        "entrenamiento": "Entrenamieno ritmo maratón\n15' suaves + ritmo maratón 2 x 8 km (4:15 x km) rec. 3:00 (trote) +flexibilidad"
+    },
+    {
+        "mesociclo": 4,
+        "semana": 14,
+        "fecha": "2024-11-10",
+        "dia": "DO",
+        "entrenamiento": "Rodaje largo aeróbico extensivo\n1h 50' ritmo extensivo constante 4:40 - 4:35 x km + flexibilidad"
+    },
+    {
+        "mesociclo": 5,
+        "semana": 15,
+        "fecha": "2024-11-11",
+        "dia": "LU",
+        "entrenamiento": "Descanso"
+    },
+    {
+        "mesociclo": 5,
+        "semana": 15,
+        "fecha": "2024-11-12",
+        "dia": "MA",
+        "entrenamiento": "Fuerza: Circuito de fortalecimiento\n20' c.c Suaves (4:45 x km) + circuito de fortalecimiento + flexibilidad"
+    },
+    {
+        "mesociclo": 5,
+        "semana": 15,
+        "fecha": "2024-11-13",
+        "dia": "MI",
+        "entrenamiento": "Entrenamiento de series\n20' suaves + Series 6 x 1000 x 4:00 rec. 1:30 (parado) + 10' suaves + flexibilidad"
+    },
+    {
+        "mesociclo": 5,
+        "semana": 15,
+        "fecha": "2024-11-14",
+        "dia": "JU",
+        "entrenamiento": "Rodaje semilargo aeróbico extensivo\n1h ritmo extensivo constante 4:40 - 4:35 x km + core + flexibilidad"
+    },
+    {
+        "mesociclo": 5,
+        "semana": 15,
+        "fecha": "2024-11-15",
+        "dia": "VI",
+        "entrenamiento": "Descanso"
+    },
+    {
+        "mesociclo": 5,
+        "semana": 15,
+        "fecha": "2024-11-16",
+        "dia": "SA",
+        "entrenamiento": "Entrenamieno ritmo maratón\n15' suaves + ritmo maratón 4 x (2km (4:15 x km) + 500 x 2:20 (ritmo 4:40 x km) +flexibilidad"
+    },
+    {
+        "mesociclo": 5,
+        "semana": 15,
+        "fecha": "2024-11-17",
+        "dia": "DO",
+        "entrenamiento": "Rodaje largo aeróbico extensivo\n1h 20' ritmo extensivo constante 4:40 - 4:35 x km + flexibilidad"
+    },
+    {
+        "mesociclo": 5,
+        "semana": 16,
+        "fecha": "2024-11-18",
+        "dia": "LU",
+        "entrenamiento": "Descanso"
+    },
+    {
+        "mesociclo": 5,
+        "semana": 16,
+        "fecha": "2024-11-19",
+        "dia": "MA",
+        "entrenamiento": "Entrenamiento regeneración\n40' c.c suaves 4:45 x km + flexibilidad"
+    },
+    {
+        "mesociclo": 5,
+        "semana": 16,
+        "fecha": "2024-11-20",
+        "dia": "MI",
+        "entrenamiento": "Entrenamiento de series\n20' suaves + Series 4 x 1000 x 4:00 rec. 1:30 (parado) + 10' suaves + flexibilidad"
+    },
+    {
+        "mesociclo": 5,
+        "semana": 16,
+        "fecha": "2024-11-21",
+        "dia": "JU",
+        "entrenamiento": "Entrenamiento regeneración\n30' c.c suaves 4:45 x km + 6 x 80m aceleraciones + flexibilidad"
+    },
+    {
+        "mesociclo": 5,
+        "semana": 16,
+        "fecha": "2024-11-22",
+        "dia": "VI",
+        "entrenamiento": "Descanso"
+    },
+    {
+        "mesociclo": 5,
+        "semana": 16,
+        "fecha": "2024-11-23",
+        "dia": "SA",
+        "entrenamiento": "Entrenamiento precompetitivo\nSesión precompetitiva 20' suaves + 5-6 progresivos de 60m soltando piernas + flexibilidad"
+    },
+    {
+        "mesociclo": 5,
+        "semana": 16,
+        "fecha": "2024-11-24",
+        "dia": "DO",
+        "entrenamiento": "MARATÓN DONOSTIA"
+    }
+]

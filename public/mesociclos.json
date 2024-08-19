@@ -1,0 +1,22 @@
+[
+    {
+        "mesociclo": 1,
+        "nombre": "Básico-general"
+    },
+    {
+        "mesociclo": 2,
+        "nombre": "Acumulación"
+    },
+    {
+        "mesociclo": 3,
+        "nombre": "Acumulación y desarrollo"
+    },
+    {
+        "mesociclo": 4,
+        "nombre": "Desarrollo competitivo"
+    },
+    {
+        "mesociclo": 5,
+        "nombre": "Tapering"
+    }
+]
