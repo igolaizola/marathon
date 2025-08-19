@@ -198,10 +198,15 @@
     </footer>
 
     <script>
+        const MARATHON_DATE = '2025-11-23';
+
         let currentWeekIndex = 0;
         let entrenamientos = [];
         let semanas = [];
         let mesociclos = [];
+
+        const DIA_INDEX = { LU: 0, MA: 1, MI: 2, JU: 3, VI: 4, SA: 5, DO: 6 };
+        const fmt = (d) => d.toLocaleDateString('es-ES', { weekday: 'long', day: 'numeric', month: 'long' });
 
         async function fetchData() {
             try {
@@ -219,89 +224,119 @@
                 updateUI();
             } catch (error) {
                 console.error('Error fetching data:', error);
-                document.getElementById('weekInfo').innerHTML = '<p>Error loading data. Please try again later.</p>';
+                document.getElementById('weekInfo').innerHTML =
+                    '<p>Error cargando datos. Inténtalo de nuevo más tarde.</p>';
             }
+        }
+
+        function totalWeeks() {
+            if (semanas && semanas.length) return Math.max(...semanas.map(s => s.semana));
+            return Math.max(...entrenamientos.map(e => e.semana));
+        }
+
+        function daysFromMarathon(weekNumber, diaIdx) {
+            // Semana N, DO (6) = maratón.
+            const N = totalWeeks();
+            return ((N - weekNumber) * 7) + (6 - diaIdx);
+        }
+
+        function computeDateForTraining(t) {
+            const diaIdx = DIA_INDEX[t.dia] ?? 0;
+            const delta = daysFromMarathon(t.semana, diaIdx);
+            const d = new Date(MARATHON_DATE);
+            d.setHours(0, 0, 0, 0);
+            d.setDate(d.getDate() - delta);
+            return d;
+        }
+
+        function weekDateRange(weekNumber) {
+            const startDelta = daysFromMarathon(weekNumber, 0); // LU
+            const endDelta = daysFromMarathon(weekNumber, 6); // DO
+            const start = new Date(MARATHON_DATE), end = new Date(MARATHON_DATE);
+            start.setHours(0, 0, 0, 0); end.setHours(0, 0, 0, 0);
+            start.setDate(start.getDate() - startDelta);
+            end.setDate(end.getDate() - endDelta);
+            return { start, end };
+        }
+
+        function setCurrentWeek() {
+            const today = new Date(); today.setHours(0, 0, 0, 0);
+            const N = totalWeeks();
+            const first = weekDateRange(1);
+            const last = weekDateRange(N);
+
+            if (today < first.start || today > last.end) {
+                currentWeekIndex = 0;
+                return;
+            }
+            for (let w = 1; w <= N; w++) {
+                const { start, end } = weekDateRange(w);
+                if (today >= start && today <= end) {
+                    currentWeekIndex = w - 1;
+                    return;
+                }
+            }
+            currentWeekIndex = 0;
         }
 
         function updateUI() {
-            if (semanas.length === 0 || currentWeekIndex < 0 || currentWeekIndex >= semanas.length) {
-                console.error('Invalid week index or no data');
-                return;
-            }
+            const N = totalWeeks();
+            if (N === 0 || currentWeekIndex < 0 || currentWeekIndex >= N) return;
 
-            const weekInfo = semanas[currentWeekIndex];
+            const weekNum = currentWeekIndex + 1;
+            const weekInfo = semanas.find(s => s.semana === weekNum) || { semana: weekNum };
             const mesociclo = mesociclos.find(m => m.mesociclo === weekInfo.mesociclo);
-            const weekTrainings = entrenamientos.filter(e => e.mesociclo === weekInfo.mesociclo && e.semana === weekInfo.semana);
+            const { start, end } = weekDateRange(weekNum);
+            const rangeStr = `${start.toLocaleDateString('es-ES', { day: 'numeric', month: 'short' })} – ${end.toLocaleDateString('es-ES', { day: 'numeric', month: 'short' })}`;
 
-            document.getElementById('currentWeek').textContent = `Semana ${weekInfo.semana}`;
-
-            // Update navigation buttons visibility
+            document.getElementById('currentWeek').textContent = `Semana ${weekNum} (${rangeStr})`;
             document.getElementById('prevWeek').classList.toggle('hidden', currentWeekIndex === 0);
-            document.getElementById('nextWeek').classList.toggle('hidden', currentWeekIndex === semanas.length - 1);
+            document.getElementById('nextWeek').classList.toggle('hidden', currentWeekIndex === N - 1);
 
             const weekInfoHtml = `
-                <h2>${weekInfo.nombre}</h2>
-                <p class="mesociclo">Mesociclo ${weekInfo.mesociclo}: ${mesociclo ? mesociclo.nombre : 'N/A'}</p>
-                <button class="toggle-description">Ver descripción</button>
-                <div class="week-description">
-                    <p>${weekInfo.descripcion}</p>
-                </div>
-            `;
+      <h2>${weekInfo.nombre || `Semana ${weekNum}`}</h2>
+      <p class="mesociclo">Mesociclo ${weekInfo.mesociclo ?? 'N/A'}: ${mesociclo ? mesociclo.nombre : 'N/A'}</p>
+      <button class="toggle-description">Ver descripción</button>
+      <div class="week-description">
+        <p>${weekInfo.descripcion || ''}</p>
+      </div>
+    `;
             document.getElementById('weekInfo').innerHTML = weekInfoHtml;
 
-            const trainingDaysHtml = weekTrainings.map(training => `
-                <div class="training-day">
-                    <h3>${new Date(training.fecha).toLocaleDateString('es-ES', { weekday: 'long', day: 'numeric', month: 'long' })}</h3>
-                    <p>${training.entrenamiento}</p>
-                </div>
-            `).join('');
+            const weekTrainings = entrenamientos
+                .filter(e => e.semana === weekNum && e.mesociclo === weekInfo.mesociclo)
+                .map(e => ({ ...e, computedDate: computeDateForTraining(e) }))
+                .sort((a, b) => a.computedDate - b.computedDate);
+
+            const trainingDaysHtml = weekTrainings.map(t => `
+      <div class="training-day">
+        <h3>${fmt(t.computedDate)}</h3>
+        <p>${t.entrenamiento.replace(/\n/g, '<br>')}</p>
+      </div>
+    `).join('');
             document.getElementById('trainingDays').innerHTML = trainingDaysHtml;
 
-            document.querySelector('.toggle-description').addEventListener('click', toggleDescription);
-        }
-
-        function toggleDescription() {
-            const description = document.querySelector('.week-description');
-            const button = document.querySelector('.toggle-description');
-            button.classList.toggle('active');
-            if (description.style.display === 'none' || description.style.display === '') {
-                description.style.display = 'block';
-                button.textContent = 'Ocultar descripción';
-            } else {
-                description.style.display = 'none';
-                button.textContent = 'Ver descripción';
-            }
+            const btn = document.querySelector('.toggle-description');
+            if (btn) btn.addEventListener('click', () => {
+                const description = document.querySelector('.week-description');
+                btn.classList.toggle('active');
+                const visible = description.style.display === 'block';
+                description.style.display = visible ? 'none' : 'block';
+                btn.textContent = visible ? 'Ver descripción' : 'Ocultar descripción';
+            });
         }
 
         document.getElementById('prevWeek').addEventListener('click', () => {
-            if (currentWeekIndex > 0) {
-                currentWeekIndex--;
-                updateUI();
-            }
+            if (currentWeekIndex > 0) { currentWeekIndex--; updateUI(); }
         });
-
         document.getElementById('nextWeek').addEventListener('click', () => {
-            if (currentWeekIndex < semanas.length - 1) {
-                currentWeekIndex++;
-                updateUI();
-            }
+            const N = totalWeeks();
+            if (currentWeekIndex < N - 1) { currentWeekIndex++; updateUI(); }
         });
-
-        function setCurrentWeek() {
-            const today = new Date();
-            const startDate = new Date('2024-08-05');
-            const endDate = new Date('2024-11-24');
-
-            if (today < startDate || today > endDate) {
-                currentWeekIndex = 0;  // Show the first week
-            } else {
-                const weekDiff = Math.floor((today - startDate) / (7 * 24 * 60 * 60 * 1000));
-                currentWeekIndex = Math.min(Math.max(weekDiff, 0), semanas.length - 1);
-            }
-        }
 
         fetchData();
     </script>
+
 </body>
 
 </html>
